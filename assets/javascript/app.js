@@ -21,31 +21,24 @@ function displayGifs() {
             var gifDiv = $("<div class='gif'>");
             // Storing the rating data
             var rating = gif[i].rating;
-
             // Creating an element to have the rating displayed
             var displayRating = $("<p>").text("Rating: " + rating);
-
             // Displaying the rating
             gifDiv.append(displayRating);
             $("#images-view").append(displayRating);
-
             // Retrieving the URL for the image
             var imgURL = gif[i].images.fixed_height.url;
-
             // Creating an element to hold the image
             var image = $("<img>").attr("src", imgURL);
-
             // assign animated and still image versions as attributes 
             image.attr("data-animate", gif[i].images.fixed_height.url);
             image.attr("data-state", "still");
             image.attr("data-still", gif[i].images.fixed_height_still.url);
             image.attr("class", "gif");
-
             // Appending the image
             gifDiv.append(image);
             $("#images-view").append(image);
-
-            // Putting the entire movie above the previous gifs
+            // Putting the gifs beneath the buttons
             $("#buttons-view").prepend(gifDiv);
         }
 
@@ -78,15 +71,15 @@ function createButtons() {
 
         // Then dynamicaly generating buttons for each movie in the array
         // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
-        var a = $("<button>");
+        var button = $("<button>");
         // Adding a class of movie-btn to our button
-        a.addClass("gif-btn");
+        button.addClass("gif-btn");
         // Adding a data-attribute
-        a.attr("data-name", gifs[i]);
+        button.attr("data-name", gifs[i]);
         // Providing the initial button text
-        a.text(gifs[i]);
+        button.text(gifs[i]);
         // Adding the button to the buttons-view div
-        $("#buttons-view").append(a);
+        $("#buttons-view").append(button);
     }
 }
 
