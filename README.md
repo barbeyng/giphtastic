@@ -4,7 +4,7 @@ Ever crave junk food but feel too lazy to go to the store to get some?
 
 You've come to the right place!
 
-All the mouthwatering gifs imagineable are all here for your viewing pleasure.
+All the tempting gifs imagineable are all here for your viewing pleasure.
 
 Check it out here: https://barbeyng.github.io/giphtastic/index.html
 
